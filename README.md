@@ -2,8 +2,9 @@
 [![](https://jitpack.io/v/liulixu/LiuT.svg)](https://jitpack.io/#liulixu/LiuT)
 使用方法：
 在app的build.gradle中添加依赖：
-
+```
 implementation 'com.github.liulixu:LiuT:v1.3.3.1'
+```
 
 ACtivity中使用
 
@@ -39,6 +40,7 @@ takePhotoes.recoverState(savedInstanceState, MainActivity.class);
                 break;
         }
 ```
+
 5.资源清理
 ```
  @Override
