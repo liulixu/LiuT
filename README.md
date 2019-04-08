@@ -1,12 +1,13 @@
 # LiuT
 [![](https://jitpack.io/v/liulixu/LiuT.svg)](https://jitpack.io/#liulixu/LiuT)
+
 使用方法：
 在app的build.gradle中添加依赖：
 ```
 implementation 'com.github.liulixu:LiuT:v1.3.3.1'
 ```
 
-ACtivity中使用
+Activity中使用
 
 创建对象：
 ```
