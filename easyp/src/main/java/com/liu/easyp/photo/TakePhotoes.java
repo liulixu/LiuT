@@ -63,15 +63,17 @@ public class TakePhotoes implements CreatePictureDialog.ResultListener {
         }
     }
 
-    private void loadGalleryBitmap(Uri uri, ImageView view) {
+    public void loadGalleryBitmap(Uri uri, ImageView view) {
         Observable<Bitmap> bitmapObservable=ObservableUtils.loadGalleryBitmap(mContext.getApplicationContext(),uri,view);
         executeObservableTask(bitmapObservable,view);
     }
-    private void loadPictureBitmap(ImageView view) {
+    public void loadPictureBitmap(ImageView view) {
+
+        
         Observable<Bitmap> bitmapObservable= ObservableUtils.loadPictureBitmap(mContext.getApplicationContext(), mPicPath, view);
         executeObservableTask(bitmapObservable,view);
     }
-    private void executeObservableTask(Observable<Bitmap> observable,ImageView view) {
+    public void executeObservableTask(Observable<Bitmap> observable,ImageView view) {
         Subscription subscription = observable
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
