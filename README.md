@@ -22,7 +22,12 @@ takePhotoes.recoverState(savedInstanceState, MainActivity.class);
 
 3.初始化用来装图片的  ImageView mImgView
 
-4.实现onActivityResult（）
+4.显示选项：
+```
+takePhotoes.showPictureDialog()
+```
+
+5.实现onActivityResult（）
 ```
   switch (requestCode) {
             //图库返回
@@ -42,7 +47,7 @@ takePhotoes.recoverState(savedInstanceState, MainActivity.class);
         }
 ```
 
-5.资源清理
+6.资源清理
 ```
  @Override
     protected void onDestroy() {
