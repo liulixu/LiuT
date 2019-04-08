@@ -15,6 +15,7 @@ import android.support.v4.content.FileProvider;
 
 
 import com.liu.easyp.BuildConfig;
+import com.zhy.base.fileprovider.FileProvider7;
 
 import java.io.File;
 
@@ -30,8 +31,8 @@ public class CameraUtils {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (intent.resolveActivity(context.getPackageManager())!=null){
             if (Build.VERSION.SDK_INT>=24){
-                intent.putExtra(MediaStore.EXTRA_OUTPUT, FileProvider.getUriForFile(context.getApplicationContext()
-                        , BuildConfig.APPLICATION_ID+".provider",new File(picPath)));
+                intent.putExtra(MediaStore.EXTRA_OUTPUT, FileProvider7.getUriForFile(context.getApplicationContext()
+                        ,new File(picPath)));
                 intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
             }else
                 intent.putExtra(MediaStore.EXTRA_OUTPUT,Uri.fromFile(new File(picPath)));
